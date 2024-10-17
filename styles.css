@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+  }
+  
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+  
+  .container {
+    max-width: 390px; /* ขนาด iPhone 14 */
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-bottom: 20px;
+  }
+  
+  .branches {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .branch-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s;
+  }
+  
+  .branch-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .branch-card img {
+    width: 50px;
+  }
+  
+  .branch-card h3 {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+  
+  .error {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .normal {
+    background-color: #e0e0e0;
+  }
+  
+  .bell-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .quick-access {
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #f44336;
+  }
+  
+  .error-box {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .error-box p {
+    margin: 5px 0;
+  }
+  
+  .back-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .error-detail img {
+    width: 80px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .feedback-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .clear, .redo {
+    padding: 10px;
+    width: 48%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .clear {
+    background-color: #4caf50;
+  }
+  
+  .redo {
+    background-color: #f44336;
+  }

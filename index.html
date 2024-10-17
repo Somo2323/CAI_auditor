@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Branch Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- หน้าแรกแสดงการ์ดสาขา -->
+  <div id="branch-list" class="container">
+    <header>
+      <img src="cpalllogo.png" alt="CP Logo" class="logo">
+      <h1>ALL 7-11 Branches</h1>
+      <input type="text" class="search-bar" placeholder="Search reported history">
+    </header>
+
+    <div id="branches" class="branches">
+      <!-- สาขาแรก มีปัญหา -->
+      <div class="branch-card error" id="branch1">
+        <img src="7-Eleven-logo-08AAB4F0FE-seeklogo.com.png" alt="Branch 1">
+        <h3>Branch 1</h3>
+        <span class="bell-icon">🔔</span>
+        <button class="quick-access" id="quick-access-branch1" onclick="showErrorDetail('branch1')">Quick Access →</button>
+      </div>
+
+      <!-- สาขาอื่นๆ ไม่มีปัญหา -->
+      <div class="branch-card normal" id="branch2">
+        <img src="7-Eleven-logo-08AAB4F0FE-seeklogo.com.png" alt="Branch 2">
+        <h3>Branch 2</h3>
+      </div>
+
+      <div class="branch-card normal" id="branch3">
+        <img src="7-Eleven-logo-08AAB4F0FE-seeklogo.com.png" alt="Branch 3">
+        <h3>Branch 3</h3>
+      </div>
+
+      <div class="branch-card error" id="branch4">
+        <img src="7-Eleven-logo-08AAB4F0FE-seeklogo.com.png" alt="Branch 4">
+        <h3>Branch 4</h3>
+        <span class="bell-icon">🔔</span>
+        <button class="quick-access" id="quick-access-branch4" onclick="showErrorDetail('branch4')">Quick Access →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- หน้ารายละเอียดข้อผิดพลาด -->
+  <div id="error-detail" class="container hidden">
+    <button class="back-button" onclick="showBranchList()">←</button>
+    <h2>Error Detail</h2>
+    <div class="error-box">
+      <p class="error-code">9400003</p>
+      <p class="error-date">Date of alert: dd/mm/yy</p>
+      <p class="error-desc">⚠️ This Product Data got an error</p>
+    </div>
+
+    <div class="error-detail">
+      <img src="7-Eleven-logo-08AAB4F0FE-seeklogo.com.png" alt="7-11 Logo">
+      <p><strong>BRANCH :</strong> 1</p>
+      <p><strong>PRODUCT_CODE :</strong> 9400003</p>
+      <p><strong>DOC_DATE :</strong> 23/7/2567</p>
+      <p><strong>CV_CODE :</strong> 00101</p>
+      <p><strong>VENDOR_NAME :</strong> Cash Purchases</p>
+      <p><strong>REC_TYPE :</strong> CP</p>
+      <p><strong>REF_DOC_DATE :</strong> 31/7/2567</p>
+    </div>
+
+    <button class="see-feedback" onclick="showFeedback()">See Feedback</button>
+  </div>
+
+  <!-- หน้าฟีดแบ็ค -->
+  <div id="feedback" class="container hidden">
+    <button class="back-button" onclick="showErrorDetail()">←</button>
+    <h2>Feedback from Retail</h2>
+    <div class="error-box">
+      <p class="error-code">9400003</p>
+      <p class="error-date">Date of alert: dd/mm/yy</p>
+      <p class="error-desc">⚠️ This Product Data got an error</p>
+    </div>
+
+    <div class="error-detail">
+      <p><strong>BRANCH :</strong> 1</p>
+      <p><strong>PRODUCT_CODE :</strong> 9400003</p>
+      <p><strong>DOC_DATE :</strong> 23/7/2567</p>
+      <p><strong>CV_CODE :</strong> 00101</p>
+      <p><strong>VENDOR_NAME :</strong> Cash Purchases</p>
+      <p><strong>REC_TYPE :</strong> CP</p>
+      <p><strong>REF_DOC_DATE :</strong> 31/7/2567</p>
+    </div>
+
+    <div class="feedback-section">
+      <p><strong>Does this mistake actually occur?</strong></p>
+      <p class="answer">YES</p>
+      <p><strong>Final feedback:</strong> The computer got stuck key on number 0</p>
+    </div>
+
+    <div class="feedback-buttons">
+      <button class="clear" onclick="clearFeedback('branch1')">Clear</button>
+      <button class="redo" onclick="redoFeedback('branch1')">Redo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
